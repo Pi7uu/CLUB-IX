@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefWidth="420.0" spacing="12.0" style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.club.ix.SocioFormViewController">
+   <children>
+      <Label text="Nuevo Socio" textFill="#244163">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label text="Complete los datos del socio. Los campos con (*) son críticos/obligatorios." textFill="#666666">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+
+      <!-- Campo Nombre -->
+      <VBox spacing="4.0">
+         <children>
+            <Label text="Nombre y Apellido (*)" textFill="#333333">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombre" promptText="Ej: Carlos Tevez" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4;" />
+            <Label fx:id="lblErrorNombre" text="" textFill="#dc3545">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+
+      <!-- Campo DNI -->
+      <VBox spacing="4.0">
+         <children>
+            <Label text="DNI (*)" textFill="#333333">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDni" promptText="Ej: 32123456" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4;" />
+            <Label fx:id="lblErrorDni" text="" textFill="#dc3545">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+
+      <!-- Campo Estado -->
+      <VBox spacing="4.0">
+         <children>
+            <Label text="Estado" textFill="#333333">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboEstado" maxWidth="1.7976931348623157E308" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4;" />
+         </children>
+      </VBox>
+
+      <!-- Campo Disciplinas -->
+      <VBox spacing="4.0">
+         <children>
+            <Label text="Disciplinas" textFill="#333333">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDisciplinas" promptText="Ej: Fútbol, Tenis, Natación" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4;" />
+         </children>
+      </VBox>
+
+      <!-- Mensaje general de aviso en rojo -->
+      <Label fx:id="lblMensajeError" text="" textFill="#dc3545" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+
+      <!-- Botones de Acción -->
+      <HBox alignment="CENTER_RIGHT" spacing="12.0">
+         <children>
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#onCancelar" prefWidth="90.0" style="-fx-background-color: #e0e0e0; -fx-text-fill: #333333; -fx-font-weight: bold; -fx-background-radius: 4;" text="Cancelar" />
+            <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#onGuardar" prefWidth="90.0" style="-fx-background-color: #245e99; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 4;" text="Guardar" />
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
